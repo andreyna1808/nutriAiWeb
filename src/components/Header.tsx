@@ -32,11 +32,9 @@ export const Header = ({ activeTab, onTabChange }: HeaderProps) => {
         >
 
             <Flex
-                maxW="3xl"
-                mx="auto"
-                px="4"
-                py="2"
-                align="center"
+                w="full"
+                px="6"
+                py="4"
                 justify="space-between"
             >
 

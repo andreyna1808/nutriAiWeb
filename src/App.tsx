@@ -6,6 +6,13 @@ import { useColorMode } from './components/ui/color-mode';
 import { Box } from '@chakra-ui/react';
 import type { AppTab } from './types';
 import { Onboarding } from './components/Onboarding';
+import { MetricCard } from './components/Dashboard/MetricCard';
+import { FaX } from 'react-icons/fa6';
+import { MacroProgress } from './components/Dashboard/MacroProgress';
+import { EmptyMeals } from './components/Dashboard/EmptyMeals';
+import { MealItem } from './components/Dashboard/MealItem';
+import { MealSection } from './components/Dashboard/MealSection';
+import { DashboardPage } from './components/Dashboard';
 
 function App() {
   const { t } = useI18n();
@@ -29,11 +36,12 @@ function App() {
     <>
       <Header activeTab={activeTab} onTabChange={onTabChanel} />
 
-        <Box>
-          {activeTab === 'dashboard' && <h1>{t('navDashboard')}</h1>}
-          {activeTab === 'meals' && <h1>{t('navAddMeal')}</h1>}
-          {activeTab === 'settings' && <h1>{t('navSettings')}</h1>}
-        </Box>
+      <Box mt={4}>
+        {activeTab === 'dashboard' && (
+          <DashboardPage onNavigate={onTabChanel} />
+        )}
+      </Box>
+
 
     </>
   )

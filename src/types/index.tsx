@@ -15,16 +15,16 @@ export interface Meal {
     items: FoodItem[]
     recommendations: string
     attentionPoints: string
-    imageUr1?: string
+    imageUrl?: string
 }
 
 export interface UserProfile {
-    weight?: number
-    height?: number
-    age?: number
-    gender?: 'male' | 'female'
-    activityLevel?: 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active'
-    goal?: 'lose' | 'gain' | 'maintain'
+    weight: number
+    height: number
+    age: number
+    gender: 'male' | 'female'
+    activityLevel: 'sedentary' | 'light' | 'moderate' | 'active' | 'very_active'
+    goal: 'lose' | 'gain' | 'maintain'
 }
 
 export interface UserPreferences {
