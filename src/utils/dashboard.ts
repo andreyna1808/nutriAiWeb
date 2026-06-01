@@ -1,7 +1,7 @@
 import type { Meal } from '@/types';
 import type { MacroProps } from '@/types/dashboard';
 
-export function getMealTotals(meal: Meal) {
+export const getMealTotals =(meal: Meal) => {
   const calories = meal?.items?.reduce((sum, i) => sum + i.calories, 0);
   const protein = meal?.items?.reduce((sum, i) => sum + i.protein_g, 0);
   const carbs = meal?.items?.reduce((sum, i) => sum + i.carbs_g, 0);
@@ -9,7 +9,7 @@ export function getMealTotals(meal: Meal) {
   return { calories, protein, carbs, fats, totalGrams: meal.totalGrams };
 }
 
-export function formatMealTime(timestamp: number): string {
+export const formatMealTime = (timestamp: number): string => {
 
   if (!timestamp) {
     return '-';

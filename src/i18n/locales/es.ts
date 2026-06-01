@@ -9,6 +9,7 @@ export const es = {
   goalLose: 'Perder Peso',
   goalGain: 'Ganar Masa',
   goalMaintain: 'Mantener Peso',
+  weight: 'Peso g',
   calories: 'Calorías',
   protein: 'Proteínas',
   carbs: 'Carbohidratos',

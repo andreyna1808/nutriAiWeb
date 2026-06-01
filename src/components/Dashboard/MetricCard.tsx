@@ -2,7 +2,6 @@ import type { MetricCardProps } from "@/types/dashboard"
 import { Box, Flex, HStack, Text } from "@chakra-ui/react"
 import { memo } from "react"
 
-
 export const MetricCard = memo(({
     label,
     value,
