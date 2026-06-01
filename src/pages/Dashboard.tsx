@@ -7,9 +7,10 @@ import { useMeals } from '@/contexts/MealsContext';
 import { calculateNutritionTargets, getImcClassification } from '@/utils/nutrition';
 import { macros } from '@/utils/dashboard';
 import type { AppTab } from '@/types';
-import { MetricCard } from './MetricCard';
-import { MacroProgress } from './MacroProgress';
-import { MealSection } from './MealSection';
+import { MetricCard } from '@/components/Dashboard/MetricCard';
+import { MacroProgress } from '@/components/Dashboard/MacroProgress';
+import { MealSection } from '@/components/Dashboard/MealSection';
+
 
 interface DashboardPageProps {
   onNavigate: (tab: AppTab) => void;
