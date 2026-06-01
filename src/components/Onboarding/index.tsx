@@ -11,7 +11,7 @@ import { StepThree } from "./stepThree";
 
 export const Onboarding = () => {
     const { t } = useI18n();
-    const { preferences } = usePreferences();
+    const { preferences, setPreferences } = usePreferences();
     const [step, setStep] = useState(1);
     const [profile, setProfile] = useState<UserProfile>({});
 
@@ -20,7 +20,7 @@ export const Onboarding = () => {
     }
 
     const onFinish = () => {
-
+        setPreferences({ ...preferences, profile: profile, goal: profile.goal! })
     }
 
     const onNext = () => {
@@ -83,8 +83,8 @@ export const Onboarding = () => {
             </Box>
 
             {step == 1 && <StepOne profile={profile} updateProfile={updateProfile} onNext={onNext} />}
-            {step == 2 && <StepTwo />}
-            {step == 3 && <StepThree />}
+            {step == 2 && <StepTwo profile={profile} updateProfile={updateProfile} onNext={onNext} onBack={onBack} />}
+            {step == 3 && <StepThree profile={profile} onFinish={onFinish} onBack={onBack} />}
 
 
         </VStack>

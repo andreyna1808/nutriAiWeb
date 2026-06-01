@@ -19,7 +19,7 @@ export const useLocalStorage = (key: string, initialValue: any) => {
             console.log("UseLocalStorage error write: ", error)
         }
 
-    }, [key, initialValue])
+    }, [key, storedValue])
 
     return [storedValue, setStoredValue]
 }

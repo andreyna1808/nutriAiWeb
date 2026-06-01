@@ -20,7 +20,6 @@ export const StepOne = ({ profile, updateProfile, onNext }: StepOneProps) => {
         ]
     })
 
-
     return (
         <VStack gap={5} mt={4} align="stretch">
             <Box>
@@ -111,9 +110,9 @@ export const StepOne = ({ profile, updateProfile, onNext }: StepOneProps) => {
                         <Portal>
                             <Select.Positioner>
                                 <Select.Content>
-                                    {genders.items.map((framework) => (
-                                        <Select.Item item={framework} key={framework.value}>
-                                            {framework.label}
+                                    {genders.items.map((item) => (
+                                        <Select.Item item={item} key={item.value}>
+                                            {item.label}
                                             <Select.ItemIndicator />
                                         </Select.Item>
                                     ))}
@@ -121,9 +120,7 @@ export const StepOne = ({ profile, updateProfile, onNext }: StepOneProps) => {
                             </Select.Positioner>
                         </Portal>
                     </Select.Root>
-
                 </Box>
-
             </Grid>
 
             <Button
